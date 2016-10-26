@@ -13,10 +13,10 @@ Currently supported: react, vue, angular1, angular2, vanilla
 * gulpfile.js
 
 ## Commands
-* npm run start - for a server
-* npm run build - for all clients build
-* npm run {name} - for a project build ( webpack/gulp )
-* npm run server - for server build
+* `npm run start`- for a server
+* `npm run build` - for all clients build
+* `npm run {name}` - for a project build ( webpack/gulp )
+* `npm run server` - for server build
 
 ## Client public path config
 * Go to src/server/config.ts for a setup
@@ -24,38 +24,41 @@ Currently supported: react, vue, angular1, angular2, vanilla
 
 ## Adding new framework/project
 Currently there is no flexible way to do it - best will be to follow implementation of one of existing frameworks.
-* add build under: ./_build/client-{name}
-* add to server cfg in ./src/server/config.ts
-* add to server in ./src/server/server.ts
-* add to dashboard in ./src/dashboard/app/components/graph/graph.ts
-* build in ./src/client-{name}
+
+* add build under: `./_build/client-{name}`
+* add to server cfg in `./src/server/config.ts`
+* add to server in `./src/server/server.ts`
+* add to dashboard in `./src/dashboard/app/components/graph/graph.ts`
+* build in `./src/client-{name}`
 
 # Server communication
 
 ## Destinations response
-```javascript
-  // {
-  // timestamp : DATE,
-  // data : [{
-  //    id: number,
-  //    from : string,
-  //    to : string,
-  //    popularity : number
-  //    },{
-  //    ...
-  //    }]
-  // }
+```js
+{
+  timestamp : DATE,
+  data : [
+    {
+      id: number,
+	   from : string,
+	   to : string,
+	   popularity : number
+    },{
+	  ...
+    }
+  ]
+}
 ```
 
 ### data:all:destinations
-```javascript
+```js
 sockets.on('data:all:destinations', (res) => {
   this.destinations = res.data.destinations;
 })
 ```
 
 ### data:add:destinations
-```javascript
+```js
 sockets.on('data:add:destinations', (res) => {
     res.data.destinations.forEach((dest) => {
         this.destinations.push(dest);
@@ -64,7 +67,7 @@ sockets.on('data:add:destinations', (res) => {
 ```
 
 ## data:stream:destinations
-```javascript
+```js
 sockets.on('data:stream:destinations', (res) => {
     res.data.destinations.forEach((dest) => {
         this.destinations.push(dest);
@@ -73,7 +76,7 @@ sockets.on('data:stream:destinations', (res) => {
 ```
 
 # Contributors
-* Markogiannakis,A,Aristos
-* Lindley,D,David
-* Johnson,JP,Josh
-* Swiat,Radoslaw
+* [Markogiannakis,A,Aristos](https://github.com/arismarko)
+* [Lindley,D,David](https://github.com/davidlindley)
+* [Johnson,JP,Josh](https://github.com/jshjohnson)
+* [Swiat,Radoslaw](https://github.com/radswiat)
