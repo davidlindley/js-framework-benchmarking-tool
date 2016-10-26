@@ -1,7 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import Sockets from '../../core/sockets';
 
 export default class FlightConnections extends React.Component {
+
   private sockets;
   private connections;
   private timestamp;
