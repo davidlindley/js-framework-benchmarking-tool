@@ -71,7 +71,7 @@ export default class FlightDestinations extends React.Component {
         }
       });
     }
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
   }
 
   render() {
@@ -79,7 +79,9 @@ export default class FlightDestinations extends React.Component {
       <div>
         {this.state.destinations.map((dest, i) => (
           <div className="panel panel-default" key={i}>
-            <div className="panel-heading">Destination</div>
+            <div className="panel-heading">
+              Destination
+            </div>
             <div className="panel-body">
               <p>{dest.from} - {dest.to}</p>
               <p>{dest.popularity}</p>
@@ -88,7 +90,9 @@ export default class FlightDestinations extends React.Component {
           </div>
         ))}
         <div className="panel panel-default panel-react">
-          <div className="panel-heading">Stats</div>
+          <div className="panel-heading">
+            Stats
+          </div>
           <div className="panel-body">
             Destinations: {this.state.destinations.length}
           </div>

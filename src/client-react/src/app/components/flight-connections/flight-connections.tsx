@@ -71,13 +71,15 @@ export default class FlightConnections extends React.Component {
         }
       }, (str) => console.log(str));
     }
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
   }
 
   render() {
     return (
       <div className="panel panel-default" >
-        <div className="panel-heading">Connections</div>
+        <div className="panel-heading">
+          Connections
+        </div>
         <div className="panel-body">
           {this.state.connections.map((con, i) => (
             <div key={i}>
