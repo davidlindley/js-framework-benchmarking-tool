@@ -14,7 +14,7 @@ Currently supported: react, vue, angular1, angular2, vanilla
 
 ## Commands
 * `npm run start`- for a server
-* `npm run build` - for all clients build
+* `npm run build` - for all clients build (you will need to run this once before starting a server for the first time)
 * `npm run {name}` - for a project build ( webpack/gulp )
 * `npm run server` - for server build
 
