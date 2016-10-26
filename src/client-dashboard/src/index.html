@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Performance dashboard</title>
+    <link href='../common/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='../common/css/bootstrap-theme.min.css' rel='stylesheet' type='text/css'>
+    <link href='../common/css/main.css' rel='stylesheet' type='text/css'>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+
+        .connectionBtn{
+            width: 100px;
+            background: #464646;
+            display: inline-block;
+            margin-right: 10px;
+            border-radius: 3px;
+            color: #6d6d6d;
+        }
+
+        .connectionBtn.connected{
+            background-image: linear-gradient(to bottom,#337933 0,#0c2f0c 100%);
+            border: 1px solid #194c19;
+            color: whitesmoke;
+        }
+
+        .connectionBtn span.text{
+            width: 75%;
+            display: block;
+            float: left;
+            cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .connectionBtn span.open{
+            width: 25%;
+            display: block;
+            float: right;
+            cursor: pointer;
+            border: 1px solid #113c11;
+            border-width: 0px 0px 0px 1px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #062106;
+        }
+
+        .graph{
+            border: 10px solid #302b79;
+            border-width: 0px 0px 30px 0px;
+        }
+
+        .graph h3{
+            padding-top: 20px;
+            padding-left: 20px;
+            background: #0b0835;
+            color: white;
+            position: relative;
+            width: 250px;
+            display: block;
+            height: 50px;
+            line-height: 12px;
+            border: 1px solid #4e47b1;
+        }
+
+
+        /* tell the SVG path to be a thin blue line without any area fill */
+        .head{
+            background: #214498;
+            background: -moz-linear-gradient(left, #214498 1%, #55379b 46%, #e62697 88%);
+            background: -webkit-linear-gradient(left, #214498 1%,#55379b 46%,#e62697 88%);
+            background: linear-gradient(to right, #214498 1%,#55379b 46%,#e62697 88%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#214498', endColorstr='#e62697',GradientType=1 );
+
+            color: white;
+        }
+        path {
+            stroke: steelblue;
+            stroke-width: 1;
+            fill: none;
+        }
+
+        .axis {
+            shape-rendering: crispEdges;
+        }
+
+        .x.axis line {
+            stroke: lightgrey;
+        }
+
+        .x.axis .minor {
+            stroke-opacity: .5;
+        }
+
+        .x.axis path {
+            display: none;
+        }
+
+        .y.axis line, .y.axis path {
+            fill: none;
+            stroke: #000;
+        }
+        .tooltip{
+            width: 115px;
+            height: auto;
+            background: rgba(212, 212, 212, 0.75);
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #bbbbbb;
+            color: black;
+            text-align: center;
+        }
+
+        .panel-default{
+            background: #676677;
+        }
+
+        label{
+            color: #d6d6d6;
+        }
+
+        input{
+            background: #0b0835 !important;
+            color: #c3c3c3 !important;
+            border-color: #000 !important;
+        }
+
+        .panel-body{
+            color: #d6d6d6 !important;
+        }
+
+        .panel-heading{
+            background: #0b0835 !important;
+            color: #d6d6d6 !important;;
+        }
+
+        .btn.btn-success{
+            background-image: linear-gradient(to bottom,#337933 0,#0c2f0c 100%) !important;
+            border-color: #194c19;
+        }
+
+        .btn.btn-danger{
+            background-image: linear-gradient(to bottom,#a2332e 0,#5a1715 100%) !important;
+            border-color: #5a1412 !important;
+        }
+
+        .btn.btn-info{
+            background-image: linear-gradient(to bottom,#4898af 0,#226477 100%) !important;
+            border-color: #135569 !important;
+        }
+    </style>
+</head>
+<body style="background : #302b79;">
+<div class="container">
+    <nav class="navbar navbar-dashboard">
+        <div class="navbar-header">
+            <span class="navbar-brand">Performance Dashboard | <{version}></span>
+        </div>
+    </nav>
+</div>
+
+<div id="app" style="background: #302b79;">
+    <connections></connections>
+    <dashboard></dashboard>
+    <div style="background: #eaeaea;">
+        <graph></graph>
+    </div>
+</div>
+
+</body>
+</html>

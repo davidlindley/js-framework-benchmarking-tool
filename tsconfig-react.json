@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "removeComments": false,
+    "noImplicitAny": false,
+    "noEmitOnError": false,
+    "noEmit": false,
+    "allowJs": true,
+    "experimentalDecorators" : true
+  },
+  "exclude" : [
+    "./src/server",
+    "./node_modules",
+    "./typings",
+    "./src/client-dashboard",
+    "./src/client-vue"
+  ],
+  "filesGlob": [
+    "./src/client-react/**/*.tsx"
+  ]
+}

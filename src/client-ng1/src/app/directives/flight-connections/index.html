@@ -1,0 +1,14 @@
+<div class="panel panel-default"
+     ng-show="connections.length > 0">
+    <div class="panel-heading">Connections</div>
+    <div class="panel-body">
+      <div ng-repeat="connection in connections">
+        <div>
+            Airline tag
+            <span class="box" id="connection-tag"></span></p>
+        </div>
+        <p>Price: {{connection.price}} {{connection.currency}}</p>
+        <p>{{connection.desc}}</p>
+      </div>
+    </div>
+</div>

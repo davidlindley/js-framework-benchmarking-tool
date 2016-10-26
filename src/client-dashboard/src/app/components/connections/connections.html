@@ -1,0 +1,25 @@
+<div class="col-lg-12" style="background: #302b79;" xmlns:v-bind="http://www.w3.org/1999/xhtml"
+     xmlns:v-on="http://www.w3.org/1999/xhtml">
+    <div class="panel panel-default">
+        <div class="panel-heading">Active connections</div>
+        <div class="panel-body">
+
+            <div class="connectionBtn"
+                 v-for="con in connectionsPossible"
+                 v-bind:class="{'connected' : isConnected(con.id)}">
+                <span class="text" v-on:click="refreshClient(con.id)">
+                    {{con.label}}
+                </span>
+                <span class="open" v-on:click="openClient(con.url)">
+                    <span class="glyphicon glyphicon glyphicon-log-in"></span>
+                </span>
+            </div>
+            <!--<button type="button" class="btn"-->
+                    <!--v-bind:class="{'btn-success' : isConnected(con.id)}"-->
+                    <!--v-for="con in connectionsPossible"-->
+                    <!--style="margin-right: 10px;">-->
+                <!--{{con.label}}-->
+            <!--</button>-->
+        </div>
+    </div>
+</div>

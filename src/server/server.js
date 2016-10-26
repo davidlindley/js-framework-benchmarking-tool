@@ -1,0 +1,51 @@
+"use strict";
+
+var express = require('express');
+var http = require('http');
+var path = require('path');
+var Sockets = require('./comp/sockets/sockets');
+var config = require('./config');
+
+var BASE_DIR = path.join(__dirname);
+
+var Server = function () {
+    function Server() {
+        this.app = express();
+        this.http = http.Server(this.app);
+        this.config();
+        this.port();
+        this.sockets();
+    }
+
+    Server.bootstrap = function () {
+        return new Server();
+    };
+
+    Server.prototype.config = function () {
+        this.app.use(function (req, res, next) {
+            res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+            res.header('Expires', '-1');
+            res.header('Pragma', 'no-cache');
+            next();
+        });
+        this.app.use('/', express.static(path.join(BASE_DIR, config.PATH_WEB_DASH)));
+        this.app.use('/ng', express.static(path.join(BASE_DIR, config.PATH_WEB_NG)));
+        this.app.use('/rt', express.static(path.join(BASE_DIR, config.PATH_WEB_RT)));
+        this.app.use('/ng1', express.static(path.join(BASE_DIR, config.PATH_WEB_NG1)));
+        this.app.use('/vue', express.static(path.join(BASE_DIR, config.PATH_WEB_VUE)));
+        this.app.use('/js', express.static(path.join(BASE_DIR, config.PATH_WEB_JS)));
+        this.app.use('/common', express.static(path.join(BASE_DIR, config.PATH_WEB_COMMON)));
+    };
+
+    Server.prototype.port = function () {
+        this.http.listen(config.SERVER_PORT, function () {
+            console.log('listening on *:' + config.SERVER_PORT);
+        });
+    };
+    Server.prototype.sockets = function () {
+        new Sockets(this.http);
+    };
+    return Server;
+}();
+var server = Server.bootstrap();
+module.exports = server.app;

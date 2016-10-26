@@ -1,0 +1,18 @@
+{
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160922195358",
+    "core-js": "registry:dt/core-js#0.0.0+20160725163759",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "d3": "registry:dt/d3#0.0.0+20160907005744",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "node": "registry:dt/node#6.0.0+20161019125345",
+    "socket.io": "registry:dt/socket.io#1.4.4+20160909205835",
+    "socket.io-client": "registry:dt/socket.io-client#1.4.4+20160317120654",
+    "vue": "registry:dt/vue#1.0.21+20160929090511"
+  },
+  "dependencies": {
+    "bluebird": "registry:npm/bluebird#3.4.1+20160909132857",
+    "react": "registry:npm/react#15.0.1+20160601175240",
+    "react-dom": "registry:npm/react-dom#15.0.1+20160826174104"
+  }
+}

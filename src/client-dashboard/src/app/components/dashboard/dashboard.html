@@ -1,0 +1,73 @@
+<div class="col-lg-12" xmlns:v-on="http://www.w3.org/1999/xhtml" style="background: #302b79;">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-default" style="min-height: 200px">
+                <div class="panel-heading">Step 1 - destinations</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Count </label>
+                                <input type="number" class="form-control" placeholder="Count" v-model="destCount">
+                            </div>
+                            <button type="button" class="btn btn-danger"
+                                    v-on:click="destinationsSet()">Set
+                                destinations
+                            </button>
+                            <button type="button" class="btn btn-success"
+                                    v-on:click="destinationsAdd()">Add
+                                destinations
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="panel panel-default" style="min-height: 200px">
+                <div class="panel-heading">Step 1 - stream</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!--<div class="form-group">-->
+                                <!--<label style="margin-right: 5px; width: 160px;">Emit timing</label>-->
+                                <!--<input type="number" class="form-control" placeholder="timing" v-model="destTiming">-->
+                            <!--</div>-->
+                            <div class="form-group">
+                                <label>Package per emit</label>
+                                <input type="number" class="form-control" placeholder="PPE" v-model="destPPE">
+                            </div>
+                            <button type="button" class="btn btn-info"
+                                    v-on:click="destinationsStream(0)">Stream
+                            </button>
+                            <button type="button" class="btn btn-info"
+                                    v-on:click="destinationsStream(1)">Stream progressive
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="panel panel-default" style="min-height: 200px">
+                <div class="panel-heading">Step 2 - connections</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label>Count</label>
+                        <input type="number" class="form-control" placeholder="Count" v-model="conCount">
+                    </div>
+                    <button type="button" class="btn btn-danger"
+                            v-on:click="connectionsSet()">Set
+                        connections
+                    </button>
+                    <button type="button" class="btn btn-success"
+                            v-on:click="connectionsAdd()">Add
+                        connections
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <div class="panel panel-default" v-for="dest in destinations">
+        <div class="panel-heading">Destination</div>
+        <div class="panel-body">
+            <p>{{dest.from}} - {{dest.to}}</p>
+            <p>{{dest.popularity}}</p>
+            <p><flights-connections></flights-connections></p>
+        </div>
+    </div>
+    <div class="panel panel-default panel-vue">
+        <div class="panel-heading">Stats</div>
+        <div class="panel-body">
+            Destinations: {{destinations.length}}
+        </div>
+    </div>
+</div>

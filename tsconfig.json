@@ -1,0 +1,46 @@
+{
+    "version": "1.7.5",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "experimentalDecorators": true
+    },
+    "formatCodeOptions": {
+        "indentSize": 2,
+        "tabSize": 2,
+        "newLineCharacter": "\r\n",
+        "convertTabsToSpaces": true,
+        "insertSpaceAfterCommaDelimiter": true,
+        "insertSpaceAfterSemicolonInForStatements": true,
+        "insertSpaceBeforeAndAfterBinaryOperators": true,
+        "insertSpaceAfterKeywordsInControlFlowStatements": true,
+        "insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+        "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+        "placeOpenBraceOnNewLineForFunctions": true,
+        "placeOpenBraceOnNewLineForControlBlocks": true
+    },
+    "compileOnSave": false,
+    "exclude": [
+        "./src/server/**/*.ts",
+        "./node_modules/**/*.ts"
+    ],
+    "filesGlob": [
+        "./src/client-vue/**/*.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    },
+    "files": [
+        "./src/client-vue/src/app/components/flights-connections/flights-connections.ts",
+        "./src/client-vue/src/app/components/flights-destinations/flights-destinations.ts",
+        "./src/client-vue/src/app/core/sockets.ts",
+        "./src/client-vue/src/app/main.ts"
+    ]
+}

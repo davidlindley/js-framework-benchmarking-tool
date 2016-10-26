@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>Angular 2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- loading manualy as webpack is breaking up path to the main.js file -->
+  <script type="text/javascript" src="ng/main.js"></script>
+  <link href='../common/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='../common/css/bootstrap-theme.min.css' rel='stylesheet' type='text/css'>
+  <link href='../common/css/main.css' rel='stylesheet' type='text/css'>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="static-header navbar-angular">
+      Angular 2
+      <div class="logo angular"></div>
+    </div>
+    <div id="app">
+      <my-app></my-app>
+    </div>
+  </div>
+</body>
+</html>

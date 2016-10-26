@@ -1,0 +1,13 @@
+<div >
+    <div class="panel panel-default" #cscroll>
+        <div class="panel-heading">Connections</div>
+        <div class="panel-body" *ngFor="let con of connections">
+            <div>
+                Airline tag
+               <!--  <p v-bind:style="{ width: '20px', height: '20px', background: con.airlineTag }"></p> -->
+            </div>
+            <p>Price: {{con.price}} {{con.currency}}</p>
+            <p>{{con.desc}}</p>
+        </div>
+    </div>
+</div>
