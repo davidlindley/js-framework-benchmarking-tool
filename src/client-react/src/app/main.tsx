@@ -11,7 +11,7 @@ class ReactApp extends React.Component {
   render() {
     return(
       <div>
-        <FlightDestinations></FlightDestinations>
+        <FlightDestinations />
       </div>
     );
   }

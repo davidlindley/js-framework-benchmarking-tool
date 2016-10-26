@@ -85,7 +85,7 @@ export default class FlightDestinations extends React.Component {
             <div className="panel-body">
               <p>{dest.from} - {dest.to}</p>
               <p>{dest.popularity}</p>
-              <FlightConnections></FlightConnections>
+              <FlightConnections />
             </div>
           </div>
         ))}
