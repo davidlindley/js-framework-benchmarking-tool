@@ -93,5 +93,3 @@ export default class FlightConnections extends React.Component {
     )
   }
 }
-
-
