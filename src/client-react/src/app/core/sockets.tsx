@@ -84,7 +84,7 @@ export default class Sockets {
   }
 
   /**
-   * Jquery thing for showing states as a overlay
+   * jQuery thing for showing states as a overlay
    * @param connected
    */
   private stateConnected(connected) {
@@ -106,4 +106,3 @@ export default class Sockets {
     return this.sockets;
   }
 }
-
