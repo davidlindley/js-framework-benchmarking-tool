@@ -1,6 +1,7 @@
 # Dashboard framework performance tool
-Project for performance testing of multiple javascript frameworks. <br>
-Currently supported: React, Vue, Angular 1.*, Angular 2 and vanilla JavaScript.
+Project for performance testing of multiple javascript frameworks.
+
+**Currently supported**: React, Vue, Angular 1.*, Angular 2 and vanilla JavaScript.
 
 ## Project structure
 * _build
