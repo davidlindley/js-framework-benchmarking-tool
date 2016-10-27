@@ -11,7 +11,7 @@ class ReactApp extends React.Component {
   render() {
     return(
       <div>
-        <FlightDestinations></FlightDestinations>
+        <FlightDestinations />
       </div>
     );
   }
@@ -22,7 +22,7 @@ class ReactApp extends React.Component {
  */
 class App {
 
-  private vue;
+  private react;
   private sockets;
 
   constructor() {
@@ -35,7 +35,7 @@ class App {
     });
   }
 
-  // initialize vue
+  // initialize react
   private startReact() {
     ReactDOM.render(
       <ReactApp compiler='TypeScript' framework='React' />,
