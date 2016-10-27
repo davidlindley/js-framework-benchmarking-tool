@@ -1,6 +1,6 @@
 # Dashboard framework performance tool
 Project for performance testing of multiple javascript frameworks. <br>
-Currently supported: react, vue, angular1, angular2, vanilla
+Currently supported: React, Vue, Angular 1.*, Angular 2 and vanilla JavaScript.
 
 ## Project structure
 * _build
@@ -14,19 +14,19 @@ Currently supported: react, vue, angular1, angular2, vanilla
 
 ## Commands
 * `npm run start`- for a server
-* `npm run build` - for all clients build (you will need to run this once before starting a server for the first time)
-* `npm run {name}` - for a project build ( webpack/gulp )
+* `npm run build` - for all clients build
+* `npm run {name}` - for a project build (webpack/gulp)
 * `npm run server` - for server build
 
 ## Client public path config
 * Go to src/server/config.ts for a setup
-* You can find your's project at: localhost:3000/{name}
+* You can find your's project at: `http://localhost:3000/{name}`
 
 ## Adding new framework/project
-Currently there is no flexible way to do it - best will be to follow implementation of one of existing frameworks.
+The easiest way to get up and running with a new framework would be to follow the implementation of an existing framework.
 
-* add build under: `./_build/client-{name}`
-* add to server cfg in `./src/server/config.ts`
+* add build config in: `./_build/client-{name}`
+* add to server config in `./src/server/config.ts`
 * add to server in `./src/server/server.ts`
 * add to dashboard in `./src/dashboard/app/components/graph/graph.ts`
 * build in `./src/client-{name}`
