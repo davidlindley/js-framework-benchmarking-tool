@@ -1,10 +1,9 @@
 var webpack = require('webpack'),
-  path = require('path',
+  path = require('path'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   PATH_BASE = './src/client-vue/';
 
 module.exports = {
-  watch: true,
   entry: {
     app: PATH_BASE + 'src/app/main.ts'
   },
@@ -72,17 +71,6 @@ module.exports = {
       title: 'VueClient',
       filename: 'index.html',
       template: PATH_BASE + 'src/index.html',
-    })
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: false,
-      mangle: false,
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false,
-        screw_ie8: true
-      }
     })
   ]
 }

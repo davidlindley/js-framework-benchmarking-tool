@@ -1,10 +1,10 @@
 var path = require('path'),
+  webpack = require('webpack'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   PATH_BASE = './src/client-dashboard/',
   WebpackAutoInject = require('webpack-auto-inject-version');
 
 module.exports = {
-  watch: true,
   entry: {
     app: PATH_BASE + 'src/app/main.ts'
   },
@@ -73,16 +73,5 @@ module.exports = {
       template: PATH_BASE + 'src/index.html',
     }),
     new WebpackAutoInject()
-    new webpack.optimize.UglifyJsPlugin({
-        sourceMap: false,
-        mangle: false,
-        output: {
-          comments: false
-        },
-        compress: {
-          warnings: false,
-          screw_ie8: true
-        }
-    })
   ]
 }

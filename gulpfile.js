@@ -35,6 +35,13 @@ gulp.task('default', function(cb) {
     plugins.gutil.log(plugins.chalk.black.bgWhite.bold('-----------------------------------------------------'));
     plugins.gutil.log(plugins.chalk.black.bgWhite.bold('-                                                    '));
     plugins.gutil.log(plugins.chalk.black.bgWhite.bold('-----------------------------------------------------'));
+    return plugins.runSequence('buildServerWatch', cb); // 'buildClientCtrl', 'buildClientNg', 'buildClientRt', 'buildServer',
+});
+
+gulp.task('server-build', function(cb) {
+    plugins.gutil.log(plugins.chalk.black.bgWhite.bold('-----------------------------------------------------'));
+    plugins.gutil.log(plugins.chalk.black.bgWhite.bold('-                                                    '));
+    plugins.gutil.log(plugins.chalk.black.bgWhite.bold('-----------------------------------------------------'));
     return plugins.runSequence('buildServer', cb); // 'buildClientCtrl', 'buildClientNg', 'buildClientRt', 'buildServer',
 });
 

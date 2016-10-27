@@ -19,7 +19,8 @@ var config = {
     loaders: [
       {
         test: /\.tsx?$/,
-        loader: "babel-loader!ts-loader?configFileName=./tsconfig-react.json"
+        loader: "babel-loader!ts-loader?configFileName=./tsconfig-react.json",
+        exclude: "/node_modules/"
       },
       {
         test : /\.jsx?/,
@@ -48,17 +49,6 @@ var config = {
       title: 'ReactClient',
       filename: 'index.html',
       template: path.join(BASE_PATH, 'src/index.html')
-    })
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: false,
-      mangle: false,
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false,
-        screw_ie8: true
-      }
     })
   ]
 };

@@ -6,7 +6,6 @@ var webpack = require('webpack'),
   PATH_BASE = './src/client-ng1/';
 
 module.exports = {
-  watch: true,
   entry: {
     app: PATH_BASE + 'src/app/main.js'
   },
@@ -64,17 +63,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: PATH_BASE + 'src/index.html',
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: false,
-      mangle: false,
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false,
-        screw_ie8: true
-      }
     })
   ]
 }

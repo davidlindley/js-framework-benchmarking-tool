@@ -16,9 +16,10 @@
     "./node_modules",
     "./typings",
     "./src/client-dashboard",
-    "./src/client-vue"
+    "./src/client-vue",
+    "./src/client-ng"
   ],
-  "filesGlob": [
-    "./src/client-react/**/*.tsx"
+  "include" : [
+    "./src/client-react/"
   ]
 }

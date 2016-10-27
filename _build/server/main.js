@@ -15,8 +15,16 @@ module.exports = function (gulp, plugins, config) {
     /**
      * Exposed final task
      */
-    gulp.task('buildServer', function(cb) {
+    gulp.task('buildServerWatch', function(cb) {
       plugins.utils.log.build('buildServer start');
       return plugins.runSequence('server-typescript', 'server-babel', 'server-typescript-babel-watcher', cb);
     });
+
+  /**
+   * Exposed final task
+   */
+  gulp.task('buildServer', function(cb) {
+    plugins.utils.log.build('buildServer start');
+    return plugins.runSequence('server-typescript', 'server-babel', cb);
+  });
 };

@@ -54,17 +54,6 @@ module.exports = {
         template: PATH_BASE + 'src/index.html',
         prefix: 'ng/'
     }),
-    new HtmlWebpackPrefixPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: false,
-      mangle: false,
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false,
-        screw_ie8: true
-      }
-    })
+    new HtmlWebpackPrefixPlugin()
   ]
 }

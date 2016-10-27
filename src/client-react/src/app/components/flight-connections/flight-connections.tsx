@@ -1,4 +1,5 @@
-import React from 'react';
+/// <reference path='../../../../../../typings/index.d.ts' />
+import * as React from 'react';
 import Sockets from '../../core/sockets';
 
 export default class FlightConnections extends React.Component {
