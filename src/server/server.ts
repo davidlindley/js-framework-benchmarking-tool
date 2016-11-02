@@ -62,9 +62,9 @@ class Server {
         });
 
         this.app.use('/',   express.static(path.join(BASE_DIR, config.PATH_WEB_DASH)));
-        this.app.use('/ng', express.static(path.join(BASE_DIR, config.PATH_WEB_NG)));
-        this.app.use('/rt', express.static(path.join(BASE_DIR, config.PATH_WEB_RT)));
-        this.app.use('/ng1', express.static(path.join(BASE_DIR, config.PATH_WEB_NG1)));
+        this.app.use('/angular2', express.static(path.join(BASE_DIR, config.PATH_WEB_ANGULAR2)));
+        this.app.use('/react', express.static(path.join(BASE_DIR, config.PATH_WEB_REACT)));
+        this.app.use('/angular', express.static(path.join(BASE_DIR, config.PATH_WEB_ANGULAR)));
         this.app.use('/vue', express.static(path.join(BASE_DIR, config.PATH_WEB_VUE)));
         this.app.use('/js', express.static(path.join(BASE_DIR, config.PATH_WEB_JS)));
         this.app.use('/common', express.static(path.join(BASE_DIR, config.PATH_WEB_COMMON)));
@@ -89,16 +89,3 @@ class Server {
 
 let server = Server.bootstrap();
 export = server.app;
-
-
-
-
-
-
-
-
-
-
-
-
-

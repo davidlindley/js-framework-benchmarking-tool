@@ -4,7 +4,7 @@ var webpack = require('webpack'),
   HtmlWebpackPrefixPlugin = require('html-webpack-prefix-plugin'),
   ExtractTextPlugin = require('extract-text-webpack-plugin'),
   helpers = require('./helpers'),
-  PATH_BASE = './src/client-ng/';
+  PATH_BASE = './src/client-angular2/';
 
 module.exports = {
   entry: {

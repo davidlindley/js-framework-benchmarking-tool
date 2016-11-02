@@ -31,7 +31,7 @@ Vue.component('connections', {
         {
           id : 'react',
           label : 'react',
-          url : 'http://localhost:3000/rt'
+          url : 'http://localhost:3000/react'
         },
         {
           id : 'js',
@@ -41,12 +41,12 @@ Vue.component('connections', {
         {
           id : 'ng1',
           label : 'angular1',
-          url : 'http://localhost:3000/ng1'
+          url : 'http://localhost:3000/angular'
         },
         {
           id : 'ng',
-          label : 'angular',
-          url : 'http://localhost:3000/ng'
+          label : 'angular2',
+          url : 'http://localhost:3000/angular2'
         }
       ],
       connections: null
