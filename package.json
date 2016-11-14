@@ -1,7 +1,7 @@
 {
-  "name": "ngrt-performance",
+  "name": "js-framework-benchmarking-tool",
   "version": "1.2.10",
-  "description": "Initial Commit",
+  "description": "Project for performance testing of multiple javascript frameworks.",
   "main": "gulpfile.js",
   "scripts": {
     "postinstall": "npm run build",
@@ -13,28 +13,46 @@
     "vue-build": "rimraf src/client-vue/dist       && webpack --config _build/client-vue/webpack.conf.js --progress --colors",
     "vanilla": "rimraf src/client-js/dist        && webpack --config _build/client-js/webpack.base.conf.js --progress --colors --watch",
     "vanilla-build": "rimraf src/client-js/dist        && webpack --config _build/client-js/webpack.base.conf.js --progress --colors",
-    "angular": "rimraf src/client-ng1/dist       && webpack --config _build/client-ng1/webpack.base.conf.js --progress --colors --watch",
-    "angular-build": "rimraf src/client-ng1/dist       && webpack --config _build/client-ng1/webpack.base.conf.js --progress --colors",
+    "angular": "rimraf src/client-angular/dist       && webpack --config _build/client-angular/webpack.base.conf.js --progress --colors --watch",
+    "angular-build": "rimraf src/client-angular/dist       && webpack --config _build/client-angular/webpack.base.conf.js --progress --colors",
     "dashboard": "rimraf src/client-dashboard/dist && webpack --config _build/client-dashboard/webpack.conf.js --progress --colors --watch",
     "dashboard-build": "rimraf src/client-dashboard/dist && webpack --config _build/client-dashboard/webpack.conf.js --progress --colors",
     "react": "rimraf src/client-react/dist     && webpack --config _build/client-react/webpack.conf.js --progress --colors --watch",
     "react-build": "rimraf src/client-react/dist     && webpack --config _build/client-react/webpack.conf.js --progress --colors",
-    "angular2": "rimraf src/client-ng/dist        && webpack --config _build/client-ng/webpack.conf.js --progress --colors --watch",
-    "angular2-build": "rimraf src/client-ng/dist        && webpack --config _build/client-ng/webpack.conf.js --progress --colors",
+    "angular2": "rimraf src/client-angular2/dist        && webpack --config _build/client-angular2/webpack.conf.js --progress --colors --watch",
+    "angular2-build": "rimraf src/client-angular2/dist        && webpack --config _build/client-angular2/webpack.conf.js --progress --colors",
     "major": "rimraf src/client-dashboard/dist && webpack --config _build/client-dashboard/webpack.conf.js --progress --colors --watch --major",
     "minor": "rimraf src/client-dashboard/dist && webpack --config _build/client-dashboard/webpack.conf.js --progress --colors --watch --minor",
     "patch": "rimraf src/client-dashboard/dist && webpack --config _build/client-dashboard/webpack.conf.js --progress --colors --watch --patch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BTplc/ngrt-performance.git"
+    "url": "git+https://github.com/BTplc/js-framework-benchmarking-tool"
   },
-  "author": "",
+  "author": "BT PLC",
+   "contributors": [
+     {
+       "name": "Aristos Markogiannakis",
+       "web": "https://github.com/arismarko"
+     },
+     {
+       "name": "David Lindley",
+       "web": "https://www.github.com/davidlindley"
+     },
+     {
+       "name": "Josh Johnson",
+       "web": "https://github.com/jshjohnson"
+     },
+     {
+       "name": "Radek Swiat",
+       "web": "https://github.com/radswiat"
+     }
+   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BTplc/ngrt-performance/issues"
+    "url": "https://github.com/BTplc/js-framework-benchmarking-tool/issues"
   },
-  "homepage": "https://github.com/BTplc/ngrt-performance#readme",
+  "homepage": "https://github.com/BTplc/js-framework-benchmarking-tool#readme",
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
     "awesome-typescript-loader": "^2.2.4",

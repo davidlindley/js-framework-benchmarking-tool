@@ -3,7 +3,7 @@ var webpack = require('webpack'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   CleanWebpackPlugin = require('clean-webpack-plugin'),
-  PATH_BASE = './src/client-ng1/';
+  PATH_BASE = './src/client-angular/';
 
 module.exports = {
   entry: {
@@ -56,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], {
-      root: '/../../src/client-ng1',
+      root: '/../../src/client-angular',
       verbose: true,
       dry: false,
     }),

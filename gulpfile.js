@@ -25,7 +25,7 @@ var config = {
  * Require diff build types
  */
 require('./_build/server/main.js')(gulp, plugins, config);
-require('./_build/client-ng1/main.js')(gulp, plugins, config);
+require('./_build/client-angular/main.js')(gulp, plugins, config);
 require('./_build/client-js/main.js')(gulp, plugins, config);
 
 /**
@@ -44,5 +44,3 @@ gulp.task('server-build', function(cb) {
     plugins.gutil.log(plugins.chalk.black.bgWhite.bold('-----------------------------------------------------'));
     return plugins.runSequence('buildServer', cb); // 'buildClientCtrl', 'buildClientNg', 'buildClientRt', 'buildServer',
 });
-
-
